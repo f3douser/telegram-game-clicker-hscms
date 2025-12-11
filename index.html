@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Кликер ТОП ВШКМИС 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Telegram WebApp JS -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <h1>Кликер ТОП ВШКМИС 2025</h1>
+      <div class="score-wrapper">
+        <span class="score-label">Очки:</span>
+        <span id="score">0</span>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <div class="multiplier-info" id="multiplier-info">
+        x<span id="multiplier-value">1</span>
+        <span id="multiplier-timer" class="multiplier-timer"></span>
+      </div>
+
+      <button id="click-button" class="click-button" type="button">
+        Клик!
+      </button>
+
+      <div class="autoclicker-info" id="autoclicker-info">
+        Автокликер: <span id="autoclicker-rate">0</span> /сек
+      </div>
+
+      <section class="upgrades">
+        <h2>Улучшения</h2>
+        <div class="upgrades-list">
+          <!-- Мощный палец -->
+          <button id="upgrade-click" class="upgrade-card" type="button">
+            <div class="upgrade-title">Мощный Палец</div>
+            <div class="upgrade-desc">
+              +<span id="click-power-bonus">1</span> к очкам за клик
+            </div>
+            <div class="upgrade-meta">
+              <span>Уровень: <span id="click-level">0</span></span>
+              <span>Цена: <span id="click-cost">50</span></span>
+            </div>
+          </button>
+
+          <!-- Автокликер -->
+          <button id="upgrade-autoclick" class="upgrade-card" type="button">
+            <div class="upgrade-title">Автокликер</div>
+            <div class="upgrade-desc">
+              +<span id="autoclick-bonus">1</span> очк/сек
+            </div>
+            <div class="upgrade-meta">
+              <span>Уровень: <span id="autoclick-level">0</span></span>
+              <span>Цена: <span id="autoclick-cost">200</span></span>
+            </div>
+          </button>
+
+          <!-- Энергия ВШКМИС -->
+          <button id="upgrade-multiplier" class="upgrade-card" type="button">
+            <div class="upgrade-title">Энергия ВШКМИС</div>
+            <div class="upgrade-desc">
+              x2 к доходу на 30 сек
+            </div>
+            <div class="upgrade-meta">
+              <span>Цена: <span id="multiplier-cost">1000</span></span>
+              <span id="multiplier-status">Готово</span>
+            </div>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <button id="share-button" class="footer-btn" type="button">
+        Поделиться результатом
+      </button>
+      <button id="about-button" class="footer-btn secondary" type="button">
+        Об авторе
+      </button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
